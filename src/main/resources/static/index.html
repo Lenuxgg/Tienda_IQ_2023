@@ -1,22 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <title>Tienda en Linea</title>
         <meta charset="UTF-8">
+        <meta name="description" content="Pagina de la eleccion 2" />
+        <meta name="keywords" content="html5, css, web, fidelitas" />
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div>
-            <h1 style="color: green; text-align: center;">Home</h1>
-            <p>Bienvenidos a la pagina de la tienda en linea...</p>
-        </div>
-        
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, pharetra nisi laoreet inceptos purus id proin fermentum, ultrices malesuada libero tempor justo iaculis. Felis rutrum metus massa cras viverra fames congue consequat ultricies, interdum pretium sagittis nam placerat himenaeos proin ante, montes gravida turpis euismod rhoncus sed vivamus quam. Sollicitudin ridiculus magna himenaeos malesuada molestie taciti imperdiet leo elementum, sem enim pharetra egestas eu diam velit dui nulla, eleifend metus nisl primis praesent ultricies class arcu.</p>
-        <p>Nisl magna arcu vitae purus aptent fusce tempus, viverra metus risus curabitur cras urna, vel nec penatibus quam lacus feugiat. Senectus platea habitasse nunc neque lectus quisque potenti, tempus magnis accumsan orci mattis eu, nibh nullam proin parturient id feugiat. Gravida proin aliquet elementum curabitur sollicitudin fermentum convallis iaculis quam senectus et sapien, parturient sem cubilia duis venenatis non ultrices imperdiet scelerisque cursus facilisis, conubia ligula mus aptent rutrum sociosqu risus dui egestas nibh sociis.</p>
-        <p>Magna dis litora velit suspendisse sagittis sem parturient orci phasellus magnis nunc, taciti torquent natoque maecenas justo nisi pharetra posuere potenti. Auctor dictum cubilia cum vehicula curabitur fermentum scelerisque ad nulla praesent, montes rutrum quisque lectus nascetur magnis sociis etiam tellus posuere condimentum, habitant sem facilisi arcu aptent integer facilisis sed vitae.</p>
-        
-        <br/> 
-        <br/> 
-        <br/>
-        <p>Ultima Linea</p>
+        <!-- Esta etiqueta indica al navegador que es un encabezado -->       
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo nav-link">Techshop</a>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link"href="ejemplo9.html">&LeftTriangleBar;</li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link"href="ejemplo2.html">&RightTriangleBar;</li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link"href="audios.html">Audios</li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link"href="videos.html">Videos;</li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link"href="iframes.html">iframes;</li>
+                    <li class="nav-menu-item"><a class="nav-menu-link nav-link"href="formularios.html">Formularios;</li>
+                    
+                </ul>
+            </nav>
+        </header>
+        <aside id="barraLateral">
+            <h2>Productos mas vendidos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, pharetra nisi laoreet inceptos purus id proin fermentum, ultrices malesuada libero tempor justo iaculis. Felis rutrum metus massa cras viverra fames congue consequat ultricies, interdum pretium sagittis nam placerat himenaeos proin ante, montes gravida turpis euismod rhoncus sed vivamus quam. Sollicitudin ridiculus magna himenaeos malesuada molestie taciti imperdiet leo elementum, sem enim pharetra egestas eu diam velit dui nulla, eleifend metus nisl primis praesent ultricies class arcu.</p>
+        </aside>
+        <section id="contenido">
+            <h2>Articulos Principales</h2>
+            <article>
+                <header>Asus Vivobook</header>
+                <p class="descripcion"><cite>Nisl magna arcu vitae purus aptent fusce tempus</cite>, viverra metus risus curabitur cras urna, vel nec penatibus quam lacus feugiat. Senectus platea habitasse nunc neque lectus quisque potenti, tempus magnis accumsan orci mattis eu, nibh nullam proin parturient id feugiat. Gravida proin aliquet elementum curabitur sollicitudin fermentum convallis iaculis quam senectus et sapien, parturient sem cubilia duis venenatis non ultrices imperdiet scelerisque cursus facilisis, conubia ligula mus aptent rutrum sociosqu risus dui egestas nibh sociis.</p>
+                <figure>
+                    <img src="images/MicrosoftTeams-image.png" alt="Asus Vivobook" width="200"/>
+                    <figcaption>Imagen con fines ilustrativos</figcaption>
+                </figure>
+            </article>
+            <article>
+                <header>Alienware ATD900</header>
+                <p class="descripcion"><cite>Nisl magna arcu vitae purus aptent fusce tempus</cite>, viverra metus risus curabitur cras urna, vel nec penatibus quam lacus feugiat. Senectus platea habitasse nunc neque lectus quisque potenti, tempus magnis accumsan orci mattis eu, nibh nullam proin parturient id feugiat. Gravida proin aliquet elementum curabitur sollicitudin fermentum convallis iaculis quam senectus et sapien, parturient sem cubilia duis venenatis non ultrices imperdiet scelerisque cursus facilisis, conubia ligula mus aptent rutrum sociosqu risus dui egestas nibh sociis.</p>
+                <figure>
+                    <img src="images/MicrosoftTeams-image (1).png" alt="Alienware ATD900" width="200"/>
+                    <figcaption>Mas vendido</figcaption>
+                </figure>
+            </article>
+            <article>
+                <header>Impresora 3D</header>
+                <p class="descripcion"><cite>Nisl magna arcu vitae purus aptent fusce tempus</cite>, viverra metus risus curabitur cras urna, vel nec penatibus quam lacus feugiat. Senectus platea habitasse nunc neque lectus quisque potenti, tempus magnis accumsan orci mattis eu, nibh nullam proin parturient id feugiat. Gravida proin aliquet elementum curabitur sollicitudin fermentum convallis iaculis quam senectus et sapien, parturient sem cubilia duis venenatis non ultrices imperdiet scelerisque cursus facilisis, conubia ligula mus aptent rutrum sociosqu risus dui egestas nibh sociis.</p>
+                <figure>
+                    <img src="images/MicrosoftTeams-image (2).png" alt="Impresora 3D" width="200"/>
+                    <figcaption>Mas economico</figcaption>
+                </figure>
+            </article>
+            <br/>
+            <br/>
+            <article>
+                <h2>Lineas de productos</h2>
+                <table border="0">
+                    <thead id="encabezadoTabla">
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Descripcion</th>
+                        </tr>
+                    </thead>
+                    <tbody id="TablaResumen">
+                        <tr>
+                            <td>1</td>
+                            <td>Teclados</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Monitores</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Portatiles</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Perifericos</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Baterias</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Headsets</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <footer id="piePagina">
+            Derechos reservados &COPY;2023 <address class="lineaDireccion">San Pablo, San Pablo, Heredia</address> <address class="lineaDireccion">8311-8101</address>
+        </footer>
     </body>
 </html>
