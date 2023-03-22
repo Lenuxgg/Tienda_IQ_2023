@@ -1,8 +1,9 @@
-
 package com.Tienda.service;
 
 import com.Tienda.dao.ClienteDao;
+import com.Tienda.dao.CreditoDao;
 import com.Tienda.domain.Cliente;
+import com.Tienda.domain.Credito;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,20 +15,22 @@ import org.springframework.transaction.annotation.Transactional;
  * @author manul
  */
 @Service
-public class ClienteSeviceImp implements ClienteService{
-    
+public class ClienteSeviceImp implements ClienteService {
+
     @Autowired
     ClienteDao clienteDao;
     
+    @Autowired
+    CreditoDao creditoDao;
+
     @Override
     @Transactional(readOnly = true) // para manejar transacciones de solo lectura
-    public List<Cliente> getClientes(){
-        return (List<Cliente>)clienteDao.findAll();
+    public List<Cliente> getClientes() {
+        return (List<Cliente>) clienteDao.findAll();
     }
 
-
     @Override
-    @Transactional
+    @Transactional(readOnly = true)
     public Cliente getCliente(Cliente cliente) {
         return clienteDao.findById(cliente.getIdCliente()).orElse(null);
     }
@@ -35,6 +38,9 @@ public class ClienteSeviceImp implements ClienteService{
     @Override
     @Transactional
     public void save(Cliente cliente) {
+        Credito credito = cliente.getCredito();
+        credito = creditoDao.save(credito);
+        cliente.setCredito(credito);
         clienteDao.save(cliente);
     }
 
@@ -43,5 +49,5 @@ public class ClienteSeviceImp implements ClienteService{
     public void delete(Cliente cliente) {
         clienteDao.deleteById(cliente.getIdCliente());
     }
-    
+
 }
