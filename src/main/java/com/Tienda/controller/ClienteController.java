@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -22,6 +23,8 @@ public class ClienteController {
     @GetMapping("/cliente/listado")
     public String inicio(Model model) {
         var clientes = clienteService.getClientes();
+        //var clientes = clienteService.getClienteCorreo("a");
+//        var clientes = clienteService.getClienteNombreApellidos("a","a");
 
         model.addAttribute("clientes", clientes);
 
@@ -50,6 +53,13 @@ public class ClienteController {
     public String eliminarCliente(Cliente cliente) {
         clienteService.delete(cliente);
         return "redirect:/cliente/listado";
+    }
+
+    @GetMapping("/cliente/buscarNombre")
+    public String buscarPorNombre(@RequestParam("nombre") String nombre, Model model) {
+        var clientes = clienteService.getClienteNombre(nombre);
+        model.addAttribute("clientes", clientes);
+        return "/cliente/listado";
     }
 
 }

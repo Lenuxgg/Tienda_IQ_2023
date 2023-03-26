@@ -9,6 +9,12 @@
         <header th:replace="layout/plantilla :: header"/>
         <h2>Nuestros Articulos</h2>
         <a th:href="@{/nuevoCliente}">Nuevo Cliente</a>
+          <br/>
+        <form th:action="@{/cliente/buscarNombre}" method="get">
+            <label for="nombre">Buscar por nombre:</label>
+            <input type="text" id="nombre" name="nombre" required/>
+            <button type="submit">Buscar</button>
+        </form>
         <br/>
         <div th:if="${clientes !=null and !clientes.empty}">
             <table border="1">
@@ -34,9 +40,14 @@
         <div th:if="${clientes == null or clientes.empty}">
             La lista de clientes esta vacia ...
         </div>
+        <form action="#" th:action="@{/cliente/buscarNombre}" method="get">
+            <label for="nombre">Buscar por nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <button type="submit">Buscar</button>
+        </form>
         
-        </div>
-        
-        <footer th:replace="layout/plantilla :: footer"/>
-    </body>
+    </div>
+
+    <footer th:replace="layout/plantilla :: footer"/>
+</body>
 </html>

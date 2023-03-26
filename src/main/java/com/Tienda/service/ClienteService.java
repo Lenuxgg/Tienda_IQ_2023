@@ -17,6 +17,12 @@ public interface ClienteService {
     public void save (Cliente cliente);
     
     public void delete (Cliente cliente);
+    
+    public List<Cliente> getClienteCorreo(String correo);
+    
+    public List<Cliente> getClienteNombreApellidos(String nombre, String apellidos);
+    
+    public List<Cliente> getClienteNombre(String nombre);
 
     
 }
