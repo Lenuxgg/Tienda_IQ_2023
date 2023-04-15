@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>TechShop</title>
         <meta charset="UTF-8">
         <link href="/css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <header th:replace="layout/plantilla :: header"/>
+        <header th:replace="layout/plantilla :: header"/></header>
         <div class="contenido">
-            <h2>Listado de Clientes</h2>
+            <h2>Listado de Articulos</h2>
             <a th:href="@{/articulo/nuevo}">Nuevo Articulo</a>
             <div th:if="${articulo != null and !articulo.empty}">
                 <table border="1">
