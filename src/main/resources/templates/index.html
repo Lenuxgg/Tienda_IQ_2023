@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
     <head th:replace="layout/plantilla :: head">
-        <title>TechShop</title>
+        <title>Inicio</title>
     </head>
     <body>
         <header th:replace="layout/plantilla :: header"/>
@@ -11,10 +11,10 @@
             <div th:if="${articulos != null and !articulos.empty}">  
                 <table border="1">
                     <thead>
-                    <th th:text="#{index.descripcion}">Descripcion</th>
-                    <th th:text="#{index.precio}">Precio</th>
-                    <th th:text="#{index.comprar}">Acciones</th>
-                    <th colspan="2">Acciones</th>
+                        <th th:text="#{index.descripcion}">Descripcion</th>
+                        <th th:text="#{index.precio}">Precio</th>
+                        <th th:text="#{index.comprar}">Acciones</th>
+                        <th colspan="2">Acciones</th>
                     </thead>
                     <tbody>
                         <tr th:each="item : ${articulos}">
@@ -29,8 +29,8 @@
                 <p th:text="#{articulo.no_mostrar}">No hay articulos</p>
             </div>
         </div>
-    </div>
+        </div>
 
-    <footer th:replace="layout/plantilla :: footer"/>
-</body>
+        <footer th:replace="layout/plantilla :: footer"/>
+    </body>
 </html>
